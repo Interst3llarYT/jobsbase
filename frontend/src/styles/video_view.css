@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.video-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(100, 100, 111, 0.1);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.video-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.jobbase-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #4a4a4a;
+}
+
+.verified-icon {
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 0 2px rgba(101, 121, 255, 0.6));
+}
+
+.video-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.video-link {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  display: block;
+  transition: box-shadow 0.3s ease;
+}
+
+.video-link:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.video-player {
+  width: 100%;
+  border-radius: 1rem;
+  display: block;
+  outline: none;
+}
+
+.video-details {
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0 0.5rem;
+}
+
+.video-description {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  margin-bottom: 0.6rem;
+}
+
+.video-author {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.at-symbol {
+  color: #6e8efb;
+  font-weight: 600;
+  margin-right: 0.3rem;
+}
+
+.video-meta {
+  font-size: 0.9rem;
+  color: #7a7a7a;
+  margin-top: 0.25rem;
+}

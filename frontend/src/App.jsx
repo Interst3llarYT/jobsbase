@@ -11,6 +11,7 @@ import InvidConfirm from "./Components/signup_invid_confirm.jsx";
 import SignUpBusi from "./Components/Signup_business.jsx";
 import Feed from "./Components/Feed.jsx";
 import Video_view from "./Components/Video_view.jsx";
+import SignedInHomePage from "./Components/SignedInHomePage.jsx";
 
 async function Request(){
 try{
@@ -46,6 +47,7 @@ function App() {
             <Route path="/vid:id" element={<Video_view/>}/>
             <Route path="/profile" element={<Profile/>}/>
             <Route path="/about" element={<AboutUs />} />
+            <Route path="home" element={<SignedInHomePage/>}/>
           </Routes>
         </BrowserRouter>
       </div>

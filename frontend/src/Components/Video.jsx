@@ -1,4 +1,5 @@
 import "../styles/navb.css";
+// import "../styles/Video_view.css"
 import vid from "../assets/imgs/1.mp4";
 import jobbase from "../assets/imgs/verified.png";
 import { NavLink } from "react-router-dom";
