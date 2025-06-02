@@ -1,0 +1,160 @@
+.content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #eee;
+}
+
+.wrapped {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Main video section */
+.wideo {
+  flex: 1 1 65%;
+  background: linear-gradient(135deg, #1a1f36, #2e3550);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+}
+
+.vidlogo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.joblogo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f0ca4d;
+  user-select: none;
+}
+
+.verif {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.video-wrapper video {
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #000;
+  box-shadow: 0 4px 15px rgba(240, 202, 77, 0.7);
+}
+
+.textunvid {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.textshtuf {
+  margin-bottom: 0.5rem;
+}
+
+.at {
+  color: #f0ca4d;
+  font-weight: 700;
+}
+
+.newshtuffadded {
+  margin: 1rem 0;
+}
+
+.btun {
+  background: #f0ca4d;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #1a1f36;
+  transition: background-color 0.3s ease;
+}
+
+.btun:hover {
+  background-color: #d4af37;
+}
+
+.cmnttext {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  box-sizing: border-box;
+}
+
+.showcmnts, .reprtvid {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Recommended videos section */
+.wideo-recmnds {
+  flex: 1 1 30%;
+  max-height: 600px;
+  overflow-y: auto;
+  background: #111628;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+}
+
+.recoms {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.recom {
+  background: #222b48;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.smallwideo video {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #000;
+  box-shadow: 0 2px 12px rgba(240, 202, 77, 0.5);
+}
+
+.smallwideo .textunvid {
+  font-size: 0.85rem;
+  color: #bbb;
+  margin-top: 0.6rem;
+}
+
+/* Scrollbar styling for recommended videos */
+.wideo-recmnds::-webkit-scrollbar {
+  width: 6px;
+}
+
+.wideo-recmnds::-webkit-scrollbar-thumb {
+  background: #f0ca4d;
+  border-radius: 3px;
+}
+
+@media (max-width: 900px) {
+  .wrapped {
+    flex-direction: column;
+  }
+  
+  .wideo, .wideo-recmnds {
+    flex: 1 1 100%;
+    max-height: none;
+  }
+}

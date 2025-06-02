@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body, html {
+  margin: 0; padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* HERO Section */
+.hero-section-aesthetic {
+  max-width: 800px;
+  margin: 6rem auto 2rem auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  letter-spacing: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.subtext-aesthetic {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons-aesthetic {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.btn-primary-aesthetic {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary-aesthetic:hover {
+  background: linear-gradient(135deg, #5c75df, #915fcd);
+  transform: translateY(-3px);
+}
+
+.btn-outline-aesthetic {
+  background: transparent;
+  border: 2px solid #6e8efb;
+  color: #6e8efb;
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-outline-aesthetic:hover {
+  background: #6e8efb;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* INFO CARDS Section */
+.section-heading-aesthetic {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #34495e;
+  letter-spacing: 1.5px;
+}
+
+.info-card-aesthetic {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.info-card-aesthetic h4 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #34495e;
+}
+
+.info-card-aesthetic p {
+  color: #7f8c8d;
+  line-height: 1.4;
+  font-size: 1rem;
+}
+
+.info-card-aesthetic:hover {
+  box-shadow: 0 15px 40px rgba(110, 142, 251, 0.3);
+}
+
+/* FINAL CTA Section */
+.final-cta-aesthetic {
+  max-width: 720px;
+  margin: 5rem auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.final-cta-aesthetic h2 {
+  font-weight: 700;
+  font-size: 2.75rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.final-cta-aesthetic p {
+  color: #7f8c8d;
+  font-size: 1.15rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+}

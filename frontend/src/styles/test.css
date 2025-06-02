@@ -1,0 +1,96 @@
+.tesmen {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    justify-content: space-evenly;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 21px;
+}
+
+.nav {
+    text-decoration: none;
+    color: white;
+}
+
+.choose {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: gray;
+
+}
+
+.login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.name {
+    background-color: blue;
+    width: 270px;
+    height: 50px;
+    text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    padding-top: 10px;
+}
+.frm{
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+.user{
+    width: 270px;
+    margin-left:auto;
+    margin-right: auto;
+margin-top: 25px;
+}
+.forgor{
+    cursor: pointer;
+    color: lightblue;
+    margin-left:15px;
+}
+.newjob{
+    margin-left: 15px;
+}
+.sign{
+    background-color: blue;
+    width: 270px;
+    height: 50px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    padding-top: 10px;
+    text-decoration: none;
+    
+}
+.btn{
+    background-color: blue;
+margin-bottom: 0px;
+}
+.bg-overlay {
+    background: url("https://images.unsplash.com/photo-1506765515384-028b60a970df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80") no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 40px;
+    backdrop-filter: blur(3px);
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 1rem;
+}

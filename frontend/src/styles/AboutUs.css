@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body, html {
+  margin: 0; padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* About Hero Section */
+.about-hero-container-aesthetic {
+  max-width: 720px;
+  margin: 6rem auto 3rem auto;
+  padding: 0 1.2rem;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.about-subtext-aesthetic {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #6c7a89;
+  margin-bottom: 1.25rem;
+}
+
+/* Call to Action Section */
+.about-cta-aesthetic {
+  max-width: 600px;
+  margin: 5rem auto 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #34495e;
+  margin-bottom: 0.75rem;
+}
+
+.cta-subtext {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+/* Buttons */
+.about-buttons-aesthetic {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.btn-primary-aesthetic {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary-aesthetic:hover {
+  background: linear-gradient(135deg, #5c75df, #915fcd);
+  transform: translateY(-3px);
+}
+
+.btn-outline-aesthetic {
+  background: transparent;
+  border: 2px solid #6e8efb;
+  color: #6e8efb;
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-outline-aesthetic:hover {
+  background: #6e8efb;
+  color: white;
+  transform: translateY(-3px);
+}
