@@ -1,0 +1,101 @@
+/* jobs.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.jobs-page {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 2rem 3rem;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+.jobs-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+
+.jobs-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #6e8efb;
+}
+
+.jobs-hero p {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.job-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem 1.8rem;
+  box-shadow: 0 6px 15px rgba(110, 142, 251, 0.15);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+
+.job-card:hover {
+  box-shadow: 0 12px 25px rgba(110, 142, 251, 0.35);
+  transform: translateY(-6px);
+}
+
+.job-card h2 {
+  margin: 0 0 0.6rem 0;
+  color: #4a4a9f;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.company {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #888;
+  margin-bottom: 0.3rem;
+  user-select: none;
+}
+
+.location {
+  font-size: 1rem;
+  font-style: italic;
+  color: #aaa;
+  margin-bottom: 1.2rem;
+  user-select: none;
+}
+
+.apply-btn {
+  background: linear-gradient(90deg, #6e8efb, #a777e3);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.55rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.3s ease;
+  user-select: none;
+}
+
+.apply-btn:hover {
+  background: linear-gradient(90deg, #a777e3, #6e8efb);
+  transform: scale(1.05);
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

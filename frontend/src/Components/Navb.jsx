@@ -1,19 +1,23 @@
 import { NavLink } from "react-router-dom";
 import "../styles/navb.css";
 
-function Navb() {
+function Navb({ userName = "User" }) {
   return (
     <nav className="navb">
       <div className="navb-logo">
         <NavLink to="/home" className="jobsbase-logo">JobsBase</NavLink>
       </div>
       <div className="navb-links">
-        <NavLink to="/home" className="navb-link" activeclassname="active" end>Home</NavLink>
         <NavLink to="/jobs" className="navb-link" activeclassname="active">Jobs</NavLink>
-        <NavLink to="/courses" className="navb-link" activeclassname="active">Courses</NavLink>
-        <NavLink to="/view" className="navb-link" activeclassname="active">View</NavLink>
-        <NavLink to="/search" className="navb-link" activeclassname="active">Search</NavLink>
-        <span className="navb-user">Hello, User</span>
+        <NavLink to="/notifications" className="navb-link" activeclassname="active">Get Notifications</NavLink>
+        <NavLink to="/upload" className="navb-link" activeclassname="active">Upload Course/Video</NavLink>
+        <NavLink to="/report" className="navb-link" activeclassname="active">Report Wrongful Activities</NavLink>
+        <NavLink to="/chat" className="navb-link" activeclassname="active">Chat with Businesses</NavLink>
+        <NavLink to="/follow" className="navb-link" activeclassname="active">Follow Businesses and Individuals</NavLink>
+
+        <NavLink to="/profile" className="navb-link" activeclassname="active">
+          Hello, {userName}
+        </NavLink>
       </div>
     </nav>
   );

@@ -12,6 +12,12 @@ import SignUpBusi from "./Components/Signup_business.jsx";
 import Feed from "./Components/Feed.jsx";
 import Video_view from "./Components/Video_view.jsx";
 import SignedInHomePage from "./Components/SignedInHomePage.jsx";
+import Jobs from "./Components/Jobs.jsx";
+import Notifications from "./Components/Notifications.jsx";
+import Upload from "./Components/Upload.jsx";
+import Report from "./Components/Report.jsx";
+import Chat from "./Components/Chat.jsx";
+import Follow from "./Components/Follow.jsx";
 
 async function Request(){
 try{
@@ -47,7 +53,13 @@ function App() {
             <Route path="/vid:id" element={<Video_view/>}/>
             <Route path="/profile" element={<Profile/>}/>
             <Route path="/about" element={<AboutUs />} />
-            <Route path="home" element={<SignedInHomePage/>}/>
+            <Route path="/home" element={<SignedInHomePage/>}/>
+            <Route path="/jobs" element={<Jobs/>}/>
+            <Route path="/notifications" element={<Notifications/>}/>
+            <Route path="/upload" element={<Upload/>}/>
+            <Route path="/report" element={<Report/>}/>
+            <Route path="/chat" element={<Chat/>}/>
+            <Route path="/follow" element={<Follow/>}/>
           </Routes>
         </BrowserRouter>
       </div>

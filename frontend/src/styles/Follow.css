@@ -1,0 +1,83 @@
+.follow-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+h2, h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.follow-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.follow-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f6fc;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.follow-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgb(0 0 0 / 0.15);
+}
+
+.btn-follow {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  user-select: none;
+  font-size: 1rem;
+  outline-offset: 2px;
+}
+
+.btn-follow:hover {
+  background: linear-gradient(135deg, #5c75df, #915fcd);
+  transform: scale(1.05);
+}
+
+.btn-follow:active {
+  transform: scale(0.95);
+}
+
+.btn-unfollow {
+  background: #ccc;
+  color: #666;
+}
+
+.btn-unfollow:hover {
+  background: #999;
+  color: white;
+  transform: scale(1.05);
+}
+@keyframes slideUpFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.follow-container {
+  animation: slideUpFadeIn 0.6s ease-out;
+}

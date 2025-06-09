@@ -47,7 +47,7 @@ function SignedInHomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Hey, Alex! 🌟
+            Hey, User!
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -61,9 +61,9 @@ function SignedInHomePage() {
         <section className="quick-links">
           {[
             { path: "/jobs", label: "Jobs" },
-            { path: "/courses", label: "Courses" },
-            { path: "/view", label: "View" },
-            { path: "/search", label: "Search" },
+            { path: "/upload", label: "Upload Course/Video" },
+            { path: "/chat", label: "Chat with Businesses" },
+            { path: "/follow", label: "Follow Businesses and Individuals" }
           ].map((link, index) => (
             <motion.div
               key={index}
@@ -77,27 +77,27 @@ function SignedInHomePage() {
         </section>
 
         <section className="feed">
-          <h2>🔥 Latest Updates</h2>
+          <h2>Latest Updates</h2>
           <motion.div
             className="feed-item"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
-            🎓 New AI course launched!
+            New AI course launched!
           </motion.div>
           <motion.div
             className="feed-item"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
-            🚀 Join the Networking Event on Friday.
+            Join the Networking Event on Friday.
           </motion.div>
           <motion.div
             className="feed-item"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
-            💼 12 new jobs posted today!
+            12 new jobs posted today!
           </motion.div>
         </section>
       </motion.div>

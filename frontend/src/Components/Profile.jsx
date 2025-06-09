@@ -1,38 +1,91 @@
-import Menu from "./Menu.jsx";
-import Navb from "./Navb.jsx";
-import bowing from "../assets/imgs/skyline.jpg"
-import mage from "../assets/imgs/noimage.png"
-import "../styles/profile.css"
+import React, { useState } from "react";
+import Navb from "./navb";
+import "../styles/profile.css";
+
 function Profile() {
-    return (
-        <>
-            <Navb />
+  const [name, setName] = useState("John Doe");
+  const [email, setEmail] = useState("johndoe@example.com");
+  const [bio, setBio] = useState("Aspiring developer passionate about tech.");
+  const [image, setImage] = useState(null);
+  const [error, setError] = useState("");
+  const [animatePic, setAnimatePic] = useState(false);
 
-            <div className="main">
-                <div className="img">
-                    <center><img src={bowing} className="imgold" /></center>
-                </div>
-                <div className="pf">
-                    <div className="cont">
-                        <div className="sec1">
-                            <div className="log"><img src={mage} className="mage" /></div>
-                        </div>
-                        <div className="sec2">
-                            <div className="upld"><input type="file" className="fle" /></div>
-                            <div className="ava"><button className="btn btn-secondary">Upload</button></div>
-                        </div>
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setImage(URL.createObjectURL(file));
+      setAnimatePic(true);
+      setTimeout(() => setAnimatePic(false), 600); // Reset animation state
+    }
+  };
 
-                    </div>
-<hr />
-                    <div className="bio">
-                        <div className="bout">About Me</div>
-                       <center> <div className="nun">No Bio Added yet</div></center>
-                    </div>
-                </div>
+  const handleSave = () => {
+    if (!name.trim() || !email.trim()) {
+      setError("Name and email cannot be empty.");
+      return;
+    }
 
-            </div>
-        </>
-    )
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
 
+    setError("");
+    alert("Profile saved!");
+  };
+
+  return (
+    <>
+      <Navb />
+      <div className="profile-container">
+        <h1 className="profile-title">Edit Your Profile</h1>
+
+        <div className="profile-box">
+          <div className="profile-pic-wrapper">
+            <img
+              src={image || "https://i.imgur.com/6VBx3io.png"}
+              alt="Profile"
+              className={`profile-pic ${animatePic ? "animate" : ""}`}
+            />
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleImageChange}
+              className="upload-input"
+            />
+          </div>
+
+          <div className="profile-form">
+            <label>Name</label>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+
+            <label>Email</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+
+            <label>Bio</label>
+            <textarea
+              rows="4"
+              value={bio}
+              onChange={(e) => setBio(e.target.value)}
+            />
+
+            {error && <p className="error-msg">{error}</p>}
+
+            <button onClick={handleSave} className="save-btn">Save Changes</button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
+
 export default Profile;
