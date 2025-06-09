@@ -1,36 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
+/* Container and general layout */
 .video-container {
   max-width: 900px;
   margin: 3rem auto;
-  padding: 2rem;
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(100, 100, 111, 0.1);
+  padding: 1rem 2rem;
   font-family: 'Poppins', sans-serif;
   color: #333;
+  background: #f9f9ff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(110, 142, 251, 0.15);
 }
 
+/* Header */
 .video-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.6rem;
+  text-align: center;
   margin-bottom: 2rem;
 }
 
 .jobbase-title {
   font-weight: 700;
-  font-size: 2.5rem;
-  color: #4a4a4a;
+  font-size: 2.4rem;
+  color: #6e8efb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 .verified-icon {
-  width: 28px;
-  height: 28px;
-  filter: drop-shadow(0 0 2px rgba(101, 121, 255, 0.6));
+  filter: drop-shadow(0 0 2px #a777e3);
 }
 
+/* Main content layout */
 .video-main {
   display: flex;
   flex-direction: column;
@@ -38,51 +38,54 @@
 }
 
 .video-link {
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
   display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(110, 142, 251, 0.3);
   transition: box-shadow 0.3s ease;
 }
 
 .video-link:hover {
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 28px rgba(110, 142, 251, 0.5);
 }
 
+/* Video player styles */
 .video-player {
   width: 100%;
-  border-radius: 1rem;
+  height: auto;
+  border-radius: 12px;
   display: block;
-  outline: none;
 }
 
+/* Video details */
 .video-details {
-  color: #6c757d;
-  font-size: 1rem;
-  line-height: 1.6;
-  padding: 0 0.5rem;
+  padding: 1rem 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(110, 142, 251, 0.1);
+  color: #444;
 }
 
 .video-description {
-  font-weight: 600;
   font-size: 1.1rem;
-  color: #4a4a4a;
   margin-bottom: 0.6rem;
+  line-height: 1.4;
 }
 
 .video-author {
-  font-style: italic;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #6e8efb;
 }
 
 .at-symbol {
-  color: #6e8efb;
-  font-weight: 600;
-  margin-right: 0.3rem;
+  font-weight: 700;
+  margin-right: 0.4rem;
+  color: #a777e3;
 }
 
 .video-meta {
   font-size: 0.9rem;
-  color: #7a7a7a;
-  margin-top: 0.25rem;
+  color: #777;
+  margin: 0.2rem 0;
 }
