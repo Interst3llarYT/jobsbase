@@ -73,13 +73,12 @@ function SignUpBusi() {
                 <input type="email" className="form-control mb-3" placeholder="Your Email" value={email} onChange={(e) => setemail(e.target.value)} required />
                 <input type="text" className="form-control mb-3" placeholder="Your Username" value={user} onChange={(e) => setuser(e.target.value)} required />
                 <input type="password" className="form-control mb-3" placeholder="Your Password" value={pass} onChange={(e) => setpass(e.target.value)} required />
-                <input type="text" className="form-control mb-3" placeholder="Confirm Username" />
                 <input type="password" className="form-control mb-4" placeholder="Confirm Password" />
-                <NavLink to="/login">
+                {/* <NavLink to="/login"> */}
                   <button type="submit" className="btn btn-primary w-100 rounded-pill" disabled={loading}>
                     {loading ? "Registering..." : "Sign Up"}
                   </button>
-                </NavLink>
+                {/* </NavLink> */}
 
               </form>
 

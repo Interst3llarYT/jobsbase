@@ -6,11 +6,12 @@ import "../styles/SignIn.css";  // New CSS file for aesthetic styling
 
 async function invlogin(event) {
   event.preventDefault();
+
   const username = event.target[0].value;
   const password = event.target[1].value;
 
   try {
-    const response = await fetch("https://7z5574jm-9000.use.devtunnels.ms/", {
+    const response = await fetch("https://7z5574jm-9000.use.devtunnels.ms/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
@@ -18,11 +19,45 @@ async function invlogin(event) {
 
     const data = await response.json();
     console.log(data); // handle success
+    if (response.ok) {
+      alert("Login successful!");
+      window.location.href = "/feed";  // Redirect to feed or home page
+      // Optionally, you can store user data in localStorage or context for further use
+      localStorage.setItem("user", JSON.stringify(data.user));
+    } else {
+      alert("Login failed: " + data.message);
+    }
   } catch (error) {
     console.error("Login error:", error);
   }
 }
+async function busilogin(event) {
+  event.preventDefault();
 
+  const username = event.target[0].value;
+  const password = event.target[1].value;
+
+  try {
+    const response = await fetch("https://7z5574jm-9000.use.devtunnels.ms/busilogin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, password }),
+    });
+
+    const data = await response.json();
+    console.log(data); // handle success
+    if (response.ok) {
+      alert("Login successful!");
+      window.location.href = "/feed";  // Redirect to feed or home page
+      // Optionally, you can store user data in localStorage or context for further use
+      localStorage.setItem("user", JSON.stringify(data.user));
+    } else {
+      alert("Login failed: " + data.message);
+    }
+  } catch (error) {
+    console.error("Login error:", error);
+  }
+}
 function SignIn() {
   return (
     <>
@@ -73,9 +108,9 @@ function SignIn() {
                     <form onSubmit={invlogin}>
                       <input type="email" placeholder="Enter Your Username" className="form-control input-aesthetic mb-3" required />
                       <input type="password" placeholder="Enter Your Password" className="form-control input-aesthetic mb-3" required />
-                      <NavLink to="/feed">
+                      {/* <NavLink to="/feed"> */}
                         <button type="submit" className="btn btn-primary w-100">Login</button>
-                      </NavLink>
+                      {/* </NavLink> */}
 
                     </form>
                     <div className="mt-3 text-center">
@@ -97,10 +132,12 @@ function SignIn() {
                 >
                   <div className="card signin-card-aesthetic p-4 shadow-soft">
                     <h2 className="text-center mb-4 accent-color">Business Login</h2>
-                    <form>
+                    <form onSubmit={busilogin}>
                       <input type="email" placeholder="Enter Your Username" className="form-control input-aesthetic mb-3" required />
                       <input type="password" placeholder="Enter Your Password" className="form-control input-aesthetic mb-3" required />
-                      <NavLink to="/feed" className="btn btn-secondary w-100">Business Login</NavLink>
+                      {/* <NavLink to="/feed" className="btn btn-secondary w-100"> */}
+                        <button type="submit" className="btn btn-secondary w-100">Business Login</button>
+                      {/* </NavLink> */}
                     </form>
                     <div className="mt-3 text-center">
                       <a href="#" className="link-aesthetic">Forgot password?</a>

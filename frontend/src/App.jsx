@@ -7,7 +7,6 @@ import Profile from "./Components/Profile.jsx";
 import Navbar from "./Components/MainNavbar.jsx";
 import Home from "./Components/Home.jsx";
 import SignUp from "./Components/Signup_invid.jsx";
-import InvidConfirm from "./Components/signup_invid_confirm.jsx";
 import SignUpBusi from "./Components/Signup_business.jsx";
 import Feed from "./Components/Feed.jsx";
 import Video_view from "./Components/Video_view.jsx";
@@ -18,6 +17,7 @@ import Upload from "./Components/Upload.jsx";
 import Report from "./Components/Report.jsx";
 import Chat from "./Components/Chat.jsx";
 import Follow from "./Components/Follow.jsx";
+import Test from "./Components/Test.jsx";
 
 async function Request(){
 try{
@@ -47,7 +47,6 @@ function App() {
             <Route path="/Shop" element={<Shop />} />*/}
             <Route path="/login" element={<SignIn />} /> 
             <Route path="/individual signup" element={<SignUp/>}/>
-            <Route path="/confirm-individual-signup" element={<InvidConfirm/>}/>
             <Route path="/business signup" element={<SignUpBusi/>}/>
             <Route path="/feed" element={<Feed/>}/>
             <Route path="/vid:id" element={<Video_view/>}/>
@@ -60,6 +59,7 @@ function App() {
             <Route path="/report" element={<Report/>}/>
             <Route path="/chat" element={<Chat/>}/>
             <Route path="/follow" element={<Follow/>}/>
+            <Route path="/test" element={<Test/>}/>
           </Routes>
         </BrowserRouter>
       </div>

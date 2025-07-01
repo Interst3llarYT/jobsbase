@@ -22,6 +22,46 @@ const regi = async (req, res) => {
     
       }
 }
+const UserLogin = async (req, res) => {
+    try {
+        const { username, password } = req.body;
+        if (!username || !password) {
+            return res.status(400).json({ error: "all fields are required" });
+        }
+        // Check if user exists in the database
+        const user = await User.findOne({ username });
+        if (!user) {
+            return res.status(404).json({ error: "User not found" });
+        }
+        // Logic to authenticate the user (add password check here if needed)
+        res.status(200).json({ message: "User logged in successfully" });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            message: "failed to log in", error: error.message
+        });
+    }
+}
+const busilogin = async (req, res) => {
+    try {
+        const { username, password } = req.body;
+        if (!username || !password) {
+            return res.status(400).json({ error: "all fields are required" });
+        }
+        // Check if business user exists in the database
+        const businessUser = await Business.findOne({ username });
+        if (!businessUser) {
+            return res.status(404).json({ error: "Business user not found" });
+        }
+        // Logic to authenticate the business user (add password check here if needed)
+        res.status(200).json({ message: "Business user logged in successfully" });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            message: "failed to log in", error: error.message
+        });
+    }
+}
 const busyRegi = async (req, res) => {
     try {
         const { name, email, username, password, phone} = req.body;
@@ -45,5 +85,7 @@ const busyRegi = async (req, res) => {
 }
 export default{
     regi,
-    busyRegi
+    busyRegi,
+    UserLogin,
+    busilogin
 }

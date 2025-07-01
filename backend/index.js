@@ -8,7 +8,7 @@ import { router } from "./router/router.js";
 
 dotenv.config();
 
-const app = express();
+const app = express(); 
 const port = 9000;
 
 app.use(cors("*")); // <-- enable CORS for all origins

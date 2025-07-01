@@ -87,13 +87,11 @@ function SignUp() {
                                 <div className="mb-3">
                                     <input type="password" className="form-control rounded-3" placeholder="Password" value={pass} onChange={(e) => setpass(e.target.value)} required />
                                 </div>
-                                <div className="mb-3">
-                                    <input type="email" className="form-control rounded-3" placeholder="Confirm Username" />
-                                </div>
+
                                 <div className="mb-4">
                                     <input type="password" className="form-control rounded-3" placeholder="Confirm Password" />
                                 </div>
-                                <NavLink to="/login">
+                                {/* <NavLink to="/login"> */}
                                     <motion.button
                                         type="submit"
                                         className="btn btn-primary w-100 rounded-3 fw-semibold"
@@ -102,7 +100,7 @@ function SignUp() {
                                     >
                                         {loading ? "Submitting..." : "Submit"}
                                     </motion.button>
-                                </NavLink>
+                                {/* </NavLink> */}
 
                             </form>
 

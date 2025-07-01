@@ -8,7 +8,8 @@ import user_controller from "../controller/user_controller.js";
 
 router.post("/indregi",user_controller.regi)
 router.post("/busyregi",user_controller.busyRegi)
-
+router.post("/login", user_controller.UserLogin)
+router.post("/busilogin", user_controller.busilogin)
 
 router.get("/", (req, res) => {
     res.status(200).json({ message: "SERVER WORKING" });
