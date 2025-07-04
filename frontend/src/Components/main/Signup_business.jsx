@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import "../../styles/background.css"; // Reuse background styles
 
 function SignUpBusi() {
-  const [name, setname] = useState('');
   const [user, setuser] = useState('');
+  const [name, setname] = useState('');
   const [email, setemail] = useState('');
   const [pass, setpass] = useState('');
   const [number, setnumber] = useState('');
@@ -25,7 +25,6 @@ function SignUpBusi() {
         body: JSON.stringify({
           name: name,
           email: email,
-          username: user,
           password: pass,
           phone: number
         })
@@ -71,7 +70,6 @@ function SignUpBusi() {
                 <input type="text" className="form-control mb-3" placeholder="Your Business Name" value={name} onChange={(e) => setname(e.target.value)} required />
                 <input type="tel" className="form-control mb-3" placeholder="Your Phone Number" value={number} onChange={(e) => setnumber(e.target.value)} required />
                 <input type="email" className="form-control mb-3" placeholder="Your Email" value={email} onChange={(e) => setemail(e.target.value)} required />
-                <input type="text" className="form-control mb-3" placeholder="Your Username" value={user} onChange={(e) => setuser(e.target.value)} required />
                 <input type="password" className="form-control mb-3" placeholder="Your Password" value={pass} onChange={(e) => setpass(e.target.value)} required />
                 <input type="password" className="form-control mb-4" placeholder="Confirm Password" />
                 {/* <NavLink to="/login"> */}

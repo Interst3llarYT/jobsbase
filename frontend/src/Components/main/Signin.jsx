@@ -34,21 +34,21 @@ async function invlogin(event) {
 async function busilogin(event) {
   event.preventDefault();
 
-  const username = event.target[0].value;
+  const email = event.target[0].value;
   const password = event.target[1].value;
 
   try {
     const response = await fetch("https://7z5574jm-9000.use.devtunnels.ms/busilogin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ email, password }),
     });
 
     const data = await response.json();
     console.log(data); // handle success
     if (response.ok) {
       alert("Login successful!");
-      window.location.href = "/feed";  // Redirect to feed or home page
+      window.location.href = "/business";  // Redirect to business page
       // Optionally, you can store user data in localStorage or context for further use
       localStorage.setItem("user", JSON.stringify(data.user));
     } else {

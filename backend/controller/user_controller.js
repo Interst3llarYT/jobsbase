@@ -64,13 +64,13 @@ const busilogin = async (req, res) => {
 }
 const busyRegi = async (req, res) => {
     try {
-        const { name, email, username, password, phone} = req.body;
+        const { name, email, password, phone} = req.body;
         console.log(req.body)
-        if (!name || !phone || !email || !username || !password) {
+        if (!name || !phone || !email || !password) {
             return res.status(400).json({ error: "all fields are required" })
         }
         const newBusiness = new Business({
-            name, email, username, password,phone
+            name, email, password, phone
         });
         await newBusiness.save();
         res.status(201).json({message: "user registered successfully"})
