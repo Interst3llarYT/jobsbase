@@ -3,13 +3,13 @@ import User from "../models/user_model.js"
 import Business from "../models/business_model.js";
 const regi = async (req, res) => {
     try {
-        const { firstname, lastname, age, username, password } = req.body;
+        const { firstname, lastname, age, email, password } = req.body;
         console.log(req.body)
-        if (!firstname || !lastname || !age || !username || !password) {
+        if (!firstname || !lastname || !age || !email || !password) {
             return res.status(400).json({ error: "all fields are required" })
         }
         const newUser = new User({
-            firstname, lastname, age, username, password
+            firstname, lastname, age, email, password
         });
         await newUser.save();
         res.status(201).json({message: "user registered successfully"})
@@ -24,12 +24,12 @@ const regi = async (req, res) => {
 }
 const UserLogin = async (req, res) => {
     try {
-        const { username, password } = req.body;
-        if (!username || !password) {
+        const { email, password } = req.body;
+        if (!email || !password) {
             return res.status(400).json({ error: "all fields are required" });
         }
         // Check if user exists in the database
-        const user = await User.findOne({ username });
+        const user = await User.findOne({ email });
         if (!user) {
             return res.status(404).json({ error: "User not found" });
         }
@@ -44,12 +44,12 @@ const UserLogin = async (req, res) => {
 }
 const busilogin = async (req, res) => {
     try {
-        const { username, password } = req.body;
-        if (!username || !password) {
+        const { email, password } = req.body;
+        if (!email || !password) {
             return res.status(400).json({ error: "all fields are required" });
         }
         // Check if business user exists in the database
-        const businessUser = await Business.findOne({ username });
+        const businessUser = await Business.findOne({ email });
         if (!businessUser) {
             return res.status(404).json({ error: "Business user not found" });
         }

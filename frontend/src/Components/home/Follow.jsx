@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../styles/follow.css";
-import Navb from "./navb";
+import "../../styles/Follow.css"; // Assuming you have a CSS file for styling
+import Navb from "./HomeNav";
 
 const sampleBusinesses = [
   { id: 1, name: "TechCorp", description: "Innovative tech solutions" },

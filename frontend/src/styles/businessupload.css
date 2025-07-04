@@ -1,0 +1,79 @@
+.upload-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem 3rem;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(110, 142, 251, 0.3);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.upload-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 2rem;
+  user-select: none;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.upload-form label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.upload-form input[type="text"],
+.upload-form textarea,
+.upload-form input[type="file"] {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.upload-form textarea {
+  resize: vertical;
+}
+
+.upload-form input[type="text"],
+.upload-form textarea {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.upload-form input[type="text"]:focus,
+.upload-form textarea:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.upload-form input[type="file"] {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.upload-form button {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  background: #ffd369;
+  color: #3a2e07;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-form button:hover {
+  background-color: #e6c651;
+}

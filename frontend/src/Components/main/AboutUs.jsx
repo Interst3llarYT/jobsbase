@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import Navbar from "./MainNavbar";
-import "../styles/AboutUs.css";  // New aesthetic styles
+import Navbar from "./Navbar";
+import "../../styles/AboutUs.css";  // New aesthetic styles
 
 function AboutUs() {
   return (

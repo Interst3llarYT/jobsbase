@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import Navb from "./navb";
-import Video from "./Video";
+import Navb from "./HomeNav";
+import Video from "../Video";
 function Feed(){
     return(
         <>

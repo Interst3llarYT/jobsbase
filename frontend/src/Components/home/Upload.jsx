@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../styles/upload.css";
-import Navb from "./Navb"
+import "../../styles/upload.css";
+import Navb from "./HomeNav"
 
 function Upload() {
   const [title, setTitle] = useState("");

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../styles/report.css";
-import Navb from "./Navb"
+import "../../styles/report.css";
+import Navb from "./HomeNav"
 
 function Report() {
   const [formData, setFormData] = useState({

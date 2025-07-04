@@ -1,0 +1,70 @@
+.report-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(110, 142, 251, 0.3);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.report-container h1 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  user-select: none;
+}
+
+.report-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.report-form select,
+.report-form textarea {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  resize: vertical;
+}
+
+.report-form select {
+  height: 40px;
+}
+
+.report-form textarea {
+  min-height: 100px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.report-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+.report-form button {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #6e8efb;
+  background-color: #fff6d1;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.report-form button:hover {
+  background-color: #ffd369;
+  color: #4a4a4a;
+}

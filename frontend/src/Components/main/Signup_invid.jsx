@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import "../styles/background.css";
+import "../../styles/background.css";
 
 function SignUp() {
     const [fname, setfname] = useState('');
@@ -26,7 +26,7 @@ function SignUp() {
                     firstname: fname,
                     lastname: lname,
                     age: age,
-                    username: user,
+                    email: user,
                     password: pass
                 })
             });
@@ -82,7 +82,7 @@ function SignUp() {
                                     <input type="text" className="form-control rounded-3" placeholder="School Name" />
                                 </div>
                                 <div className="mb-3">
-                                    <input type="email" className="form-control rounded-3" placeholder="Username" value={user} onChange={(e) => setuser(e.target.value)} required />
+                                    <input type="email" className="form-control rounded-3" placeholder="Email" value={user} onChange={(e) => setuser(e.target.value)} required />
                                 </div>
                                 <div className="mb-3">
                                     <input type="password" className="form-control rounded-3" placeholder="Password" value={pass} onChange={(e) => setpass(e.target.value)} required />

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import Navb from "./navb";
-import "../styles/SignedInHomePage.css";
+import Navb from "./HomeNav";
+import "../../styles/SignedInHomePage.css";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import confetti from "canvas-confetti";

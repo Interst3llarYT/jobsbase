@@ -1,6 +1,6 @@
 import React from "react";
-import Navb from "./navb";
-import "../styles/notifications.css";
+import Navb from "./HomeNav";
+import "../../styles/notifications.css";
 
 const notificationsData = [
   { id: 1, title: "Job application accepted", date: "2025-06-07", read: false },

@@ -1,20 +1,20 @@
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import Navbar from "./MainNavbar";
-import "../styles/SignIn.css";  // New CSS file for aesthetic styling
+import Navbar from "./Navbar";
+import "../../styles/SignIn.css";  // New CSS file for aesthetic styling
 
 async function invlogin(event) {
   event.preventDefault();
 
-  const username = event.target[0].value;
+  const email = event.target[0].value;
   const password = event.target[1].value;
 
   try {
     const response = await fetch("https://7z5574jm-9000.use.devtunnels.ms/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ email, password }),
     });
 
     const data = await response.json();
@@ -106,7 +106,7 @@ function SignIn() {
                   <div className="card signin-card-aesthetic p-4 shadow-soft">
                     <h2 className="text-center mb-4 accent-color">Individual Login</h2>
                     <form onSubmit={invlogin}>
-                      <input type="email" placeholder="Enter Your Username" className="form-control input-aesthetic mb-3" required />
+                      <input type="email" placeholder="Enter Your Email" className="form-control input-aesthetic mb-3" required />
                       <input type="password" placeholder="Enter Your Password" className="form-control input-aesthetic mb-3" required />
                       {/* <NavLink to="/feed"> */}
                         <button type="submit" className="btn btn-primary w-100">Login</button>
@@ -117,7 +117,7 @@ function SignIn() {
                       <a href="#" className="link-aesthetic">Forgot password?</a>
                     </div>
                     <div className="mt-3 text-center text-muted">
-                      New To JobsBase? <NavLink to="/individual signup" className="link-aesthetic">Sign up</NavLink>
+                      New To JobsBase? <NavLink to="/individual-signup" className="link-aesthetic">Sign up</NavLink>
                     </div>
                   </div>
                 </motion.div>
@@ -133,7 +133,7 @@ function SignIn() {
                   <div className="card signin-card-aesthetic p-4 shadow-soft">
                     <h2 className="text-center mb-4 accent-color">Business Login</h2>
                     <form onSubmit={busilogin}>
-                      <input type="email" placeholder="Enter Your Username" className="form-control input-aesthetic mb-3" required />
+                      <input type="email" placeholder="Enter Your Email" className="form-control input-aesthetic mb-3" required />
                       <input type="password" placeholder="Enter Your Password" className="form-control input-aesthetic mb-3" required />
                       {/* <NavLink to="/feed" className="btn btn-secondary w-100"> */}
                         <button type="submit" className="btn btn-secondary w-100">Business Login</button>
@@ -143,7 +143,7 @@ function SignIn() {
                       <a href="#" className="link-aesthetic">Forgot password?</a>
                     </div>
                     <div className="mt-3 text-center text-muted">
-                      New To JobsBase? <NavLink to="/business signup" className="link-aesthetic">Sign up</NavLink>
+                      New To JobsBase? <NavLink to="/business-signup" className="link-aesthetic">Sign up</NavLink>
                     </div>
                   </div>
                 </motion.div>

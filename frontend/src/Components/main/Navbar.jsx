@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // Using Lucide for icons
-import "../styles/MainNavbar.css"; // We'll define custom styles here
+import "../../styles/MainNavbar.css"; // We'll define custom styles here
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);

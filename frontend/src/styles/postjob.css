@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.postjob-container {
+  font-family: 'Poppins', sans-serif;
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: fadeSlideIn 0.7s ease-in-out;
+}
+
+.postjob-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.postjob-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.postjob-form label {
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.postjob-form input,
+.postjob-form textarea {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+  background: #fff;
+  color: #333;
+}
+
+.postjob-form input:focus,
+.postjob-form textarea:focus {
+  box-shadow: 0 0 0 3px rgba(255, 214, 105, 0.5);
+}
+
+.submit-btn {
+  padding: 0.9rem 1.2rem;
+  background: #ffd369;
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  align-self: flex-end;
+}
+
+.submit-btn:hover {
+  background: #ffe58f;
+  transform: translateY(-2px);
+}
+
+/* Fade Slide Animation */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

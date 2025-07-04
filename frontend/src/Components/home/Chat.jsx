@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Navb from "./navb";
-import "../styles/chat.css";
+import Navb from "./HomeNav";
+import "../../styles/chat.css";
 
 const businessChats = {
   "TechNova": [

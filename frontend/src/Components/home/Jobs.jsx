@@ -1,6 +1,6 @@
 import React from "react";
-import Navb from "./navb";
-import "../styles/jobs.css";
+import Navb from "./HomeNav";
+import "../../styles/jobs.css";
 
 const Jobs = () => {
   const jobs = [

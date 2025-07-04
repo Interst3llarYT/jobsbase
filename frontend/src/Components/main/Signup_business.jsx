@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import "../styles/background.css"; // Reuse background styles
+import "../../styles/background.css"; // Reuse background styles
 
 function SignUpBusi() {
   const [name, setname] = useState('');

@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { NavLink } from "react-router-dom";
-import "../styles/HomePage.css";  // New CSS file
-import Navbar from "./MainNavbar";
+import "../../styles/HomePage.css";  // New CSS file
+import Navbar from "./Navbar";
 
 function HomePage() {
   return (

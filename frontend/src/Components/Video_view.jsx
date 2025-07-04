@@ -4,7 +4,7 @@ import vid from "../assets/imgs/1.mp4";
 import jobbase from "../assets/imgs/verified.png";
 import confetti from "canvas-confetti";
 import { useNavigate } from "react-router-dom";
-import Navb from "./navb";
+import Navb from "./home/HomeNav";
 
 function Video_view() {
   const navigate = useNavigate();
