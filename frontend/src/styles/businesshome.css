@@ -3,8 +3,8 @@
 .business-home {
   font-family: 'Poppins', sans-serif;
   padding: 3rem 5%;
-  background: linear-gradient(to bottom right, #6e8efb, #a777e3);
-  color: white;
+  background: linear-gradient(to bottom right, rgb(238, 230, 214), white);
+  color: black;
   min-height: 100vh;
   animation: fadeSlideIn 0.8s ease;
 }
@@ -61,7 +61,7 @@
 }
 
 .dashboard-card button {
-  background-color: #ffd369;
+  background-color: #5a5a5a74;
   color: #333;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -72,14 +72,14 @@
 }
 
 .dashboard-card button:hover {
-  background-color: #ffc247;
+  background-color: #7876005f;
 }
 
 .recent-activity {
   margin-top: 3rem;
   padding: 1.5rem;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(150, 150, 150, 0.515);
 }
 
 .recent-activity h2 {

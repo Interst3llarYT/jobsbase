@@ -48,8 +48,8 @@
 
 .business-chat-sidebar button:hover,
 .business-chat-sidebar button.active {
-  background-color: #0d6efd;
-  color: #fff;
+  background-color: #fef960e4;
+  color: #000000;
 }
 
 .business-chat-window {
@@ -88,8 +88,8 @@
 }
 
 .chat-message.me {
-  background-color: #0d6efd;
-  color: #fff;
+  background-color: #f6ff7e;
+  color: #000000;
   align-self: flex-end;
 }
 
@@ -120,8 +120,8 @@
   padding: 0 1.5rem;
   border-radius: 25px;
   border: none;
-  background-color: #0d6efd;
-  color: #fff;
+  background-color: #ffff85;
+  color: #000000;
   cursor: pointer;
   font-weight: 600;
   font-size: 1rem;
@@ -130,7 +130,7 @@
 }
 
 .chat-send-btn:hover {
-  background-color: #084edc;
+  background-color: #f1ff86;
 }
 
 @keyframes fadeSlideUp {

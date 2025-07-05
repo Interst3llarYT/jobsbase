@@ -35,7 +35,7 @@ h2, h3 {
 }
 
 .btn-follow {
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  background: linear-gradient(135deg, #6e8efb, #778ee3);
   border: none;
   border-radius: 25px;
   color: white;
@@ -49,7 +49,7 @@ h2, h3 {
 }
 
 .btn-follow:hover {
-  background: linear-gradient(135deg, #5c75df, #915fcd);
+  background: linear-gradient(135deg, #5c75df, #5f6ecd);
   transform: scale(1.05);
 }
 

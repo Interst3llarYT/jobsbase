@@ -5,8 +5,8 @@
   max-width: 800px;
   margin: 3rem auto;
   padding: 2.5rem;
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-  color: white;
+  background: white;
+  color: black;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   animation: fadeSlideIn 0.7s ease-in-out;
@@ -41,8 +41,8 @@
   border: none;
   outline: none;
   transition: 0.3s;
-  background: #fff;
-  color: #333;
+  background: wheat;
+  color: black;
 }
 
 .postjob-form input:focus,

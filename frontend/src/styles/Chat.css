@@ -15,7 +15,7 @@
   text-align: center;
   font-size: 2rem;
   font-weight: 600;
-  color: #6e8efb;
+  color: #000000;
   margin-bottom: 1.5rem;
   user-select: none;
 }
@@ -44,16 +44,16 @@
 }
 
 .chat-message.business {
-  background: #a777e3;
-  color: white;
+  background: #345dff;
+  color: rgb(0, 0, 0);
   align-self: flex-start;
   border-bottom-left-radius: 2px;
   box-shadow: 0 3px 8px rgba(167, 119, 227, 0.6);
 }
 
 .chat-message.user {
-  background: #6e8efb;
-  color: white;
+  background: #a1b7ff;
+  color: rgb(6, 6, 6);
   align-self: flex-end;
   border-bottom-right-radius: 2px;
   box-shadow: 0 3px 8px rgba(110, 142, 251, 0.6);
@@ -80,8 +80,8 @@
 }
 
 .chat-input-area button {
-  background: linear-gradient(90deg, #6e8efb, #a777e3);
-  color: white;
+  background: lightyellow;
+  color: rgb(0, 0, 0);
   border: none;
   border-radius: 30px;
   padding: 0 1.5rem;
@@ -92,7 +92,8 @@
 }
 
 .chat-input-area button:hover {
-  background: linear-gradient(90deg, #a777e3, #6e8efb);
+  background: black;
+  color: white;
   transform: scale(1.05);
 }
 .business-selector {
@@ -102,7 +103,7 @@
   margin-bottom: 1rem;
   user-select: none;
   font-weight: 600;
-  color: #6e8efb;
+  color: #000000;
 }
 
 .business-selector label {
@@ -113,7 +114,7 @@
   padding: 0.3rem 0.6rem;
   font-size: 1rem;
   border-radius: 6px;
-  border: 2px solid #6e8efb;
+  border: 2px solid black;
   outline: none;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
@@ -122,7 +123,7 @@
 
 .business-selector select:hover,
 .business-selector select:focus {
-  border-color: #a777e3;
+  border-color: lightgray;
 }
 .chat-message {
   opacity: 1;

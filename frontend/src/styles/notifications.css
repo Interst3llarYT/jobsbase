@@ -3,17 +3,17 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #f0f2f5;
+  background: #a8a8a8;
 }
 
 .notif-container {
   max-width: 720px;
   margin: 3rem auto;
   padding: 2.5rem 2rem;
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  background: #dcdcdc9c;
   border-radius: 20px;
   box-shadow: 0 12px 30px rgba(110, 142, 251, 0.3);
-  color: white;
+  color: black;
   animation: fadeSlideIn 0.7s ease-in-out;
 }
 
@@ -54,7 +54,7 @@ body {
 
 .notif-item.read {
   background: rgba(255, 255, 255, 0.1);
-  color: #dcdcdc;
+  color: #000000;
   font-weight: 400;
 }
 

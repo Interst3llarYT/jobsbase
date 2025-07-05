@@ -19,7 +19,7 @@
   font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: #6e8efb;
+  color: #000000;
 }
 
 .jobs-hero p {
@@ -37,20 +37,20 @@
   background: white;
   border-radius: 15px;
   padding: 2rem 1.8rem;
-  box-shadow: 0 6px 15px rgba(110, 142, 251, 0.15);
+  box-shadow: 0 6px 15px rgba(126, 126, 126, 0.15);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   cursor: pointer;
   animation: fadeSlideIn 0.8s ease forwards;
 }
 
 .job-card:hover {
-  box-shadow: 0 12px 25px rgba(110, 142, 251, 0.35);
+  box-shadow: 0 12px 25px rgba(214, 223, 251, 0.35);
   transform: translateY(-6px);
 }
 
 .job-card h2 {
   margin: 0 0 0.6rem 0;
-  color: #4a4a9f;
+  color: #575757;
   font-weight: 600;
   font-size: 1.4rem;
 }
@@ -72,8 +72,8 @@
 }
 
 .apply-btn {
-  background: linear-gradient(90deg, #6e8efb, #a777e3);
-  color: white;
+  background: rgb(249, 249, 154);
+  color: black;
   font-weight: 600;
   font-size: 1rem;
   padding: 0.55rem 1.5rem;
@@ -85,7 +85,6 @@
 }
 
 .apply-btn:hover {
-  background: linear-gradient(90deg, #a777e3, #6e8efb);
   transform: scale(1.05);
 }
 
