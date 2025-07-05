@@ -40,7 +40,7 @@ body, html {
 }
 
 .btn-primary-aesthetic {
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  background: gray;
   color: white;
   padding: 0.75rem 2rem;
   border-radius: 0.75rem;
@@ -54,7 +54,7 @@ body, html {
 }
 
 .btn-primary-aesthetic:hover {
-  background: linear-gradient(135deg, #5c75df, #915fcd);
+  background: lightblue;
   transform: translateY(-3px);
 }
 
@@ -135,4 +135,23 @@ body, html {
   font-size: 1.15rem;
   margin-bottom: 2.5rem;
   line-height: 1.5;
+}
+body.dark-mode .final-cta-aesthetic {
+  background: #2a2a2a;
+  border-radius: 20px;
+  padding: 2rem;
+}
+body.dark-mode .final-cta-aesthetic h2 {
+  color: #ffd369;
+}
+body.dark-mode .final-cta-aesthetic p {
+  color: #f0f0f0;
+}
+.final-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.final-cta-buttons a {
+  text-decoration: none;
 }

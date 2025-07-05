@@ -1,0 +1,59 @@
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Override Bootstrap navbar */
+body.dark-mode .navbar.navbar-light,
+body.dark-mode .navbar {
+  background-color: #0a0a0a !important;
+  border-bottom: 1px solid #222 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8) !important;
+}
+
+body.dark-mode .navbar .nav-link,
+body.dark-mode .navbar .navbar-brand {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .navbar .nav-link:hover,
+body.dark-mode .navbar .navbar-brand:hover {
+  color: #ffd369 !important;
+}
+
+body.dark-mode .dropdown-menu {
+  background-color: #1a1a1a !important;
+  border: 1px solid #333 !important;
+}
+
+body.dark-mode .dropdown-item {
+  color: #ccc !important;
+}
+
+body.dark-mode .dropdown-item:hover {
+  background-color: #2a2a2a !important;
+  color: #ffd369 !important;
+}
+
+body.dark-mode .btn-outline-secondary {
+  background-color: #232323 !important;
+  color: #ffd369 !important;
+  border: 1px solid #444 !important;
+}
+
+body.dark-mode .btn-outline-secondary:hover {
+  background-color: #ffd369 !important;
+  color: #232323 !important;
+}
+body.dark-mode .form-control {
+  background-color: #2a2a2a !important;
+  color: #e0e0e0 !important;
+  border: 1px solid #444 !important;
+}
+body.dark-mode .form-control:focus {
+  border-color: #6e8efb !important;
+  box-shadow: none !important;
+}
+body.dark-mode .form-control::placeholder {
+  color: #b0b0b0 !important;
+}

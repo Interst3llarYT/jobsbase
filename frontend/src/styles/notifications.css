@@ -104,3 +104,49 @@ body {
     align-self: flex-end;
   }
 }
+body.dark-mode {
+  background: #141414;
+}
+body.dark-mode .notif-container {
+  background: rgba(30, 30, 30, 0.9);
+  color: #b0b0b0;
+}
+body.dark-mode .notif-item {
+  background: rgba(50, 50, 50, 0.8);
+  color: #b0b0b0;
+}
+body.dark-mode .notif-item.unread {
+  background: rgba(255, 214, 105, 0.3);
+  box-shadow: 0 6px 18px rgba(255, 214, 105, 0.5);
+}
+body.dark-mode .notif-item.read {
+  background: rgba(70, 70, 70, 0.8);
+  color: #b0b0b0;
+}
+body.dark-mode .notif-item:hover {
+  background: rgba(255, 214, 105, 0.4);
+  box-shadow: 0 10px 22px rgba(255, 214, 105, 0.65);
+}
+body.dark-mode .notif-title {
+  color: #ffd369;
+}
+body.dark-mode .notif-text {
+  color: #b0b0b0;
+}
+body.dark-mode .notif-date {
+  color: #b0b0b0;
+  opacity: 0.85;
+}
+body.dark-mode .notif-list {
+  background: rgba(30, 30, 30, 0.8);
+  border-radius: 20px;
+  padding: 1rem;
+}
+body.dark-mode .notif-list .notif-item {
+  background: rgba(50, 50, 50, 0.8);
+  color: #b0b0b0;
+}
+body.dark-mode .notif-list .notif-item.unread {
+  background: rgba(255, 214, 105, 0.3);
+  box-shadow: 0 6px 18px rgba(255, 214, 105, 0.5);
+}

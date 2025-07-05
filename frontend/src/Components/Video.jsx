@@ -32,7 +32,7 @@ function Video() {
         <section className="video-details">
           <p className="video-description">Here is an example video description.</p>
           <p className="video-author">
-            <span className="at-symbol">@jobsbase</span> AI generated video content
+            <span className="at-symbol">@jobsbase</span>
           </p>
           <p className="video-meta">Uploaded on: 4-04-2015</p>
           <p className="video-meta">Likes: 5</p>

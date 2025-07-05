@@ -79,3 +79,27 @@
     transform: translateY(0);
   }
 }
+body.dark-mode .postjob-container {
+  background: #363636;
+  color: #b0b0b0;
+}
+body.dark-mode .postjob-form input,
+body.dark-mode .postjob-form textarea {
+  background: #242424;
+  color: #b0b0b0;
+  border: 1px solid #444;
+}
+body.dark-mode .submit-btn {
+  background: #333;
+  color: #b0b0b0;
+}
+body.dark-mode .submit-btn:hover {
+  background: #444;
+  color: #ffffff;
+}
+body.dark-mode .postjob-form label {
+  color: #b0b0b0;
+}
+body.dark-mode .postjob-title {
+  color: #f0f0f0;
+}

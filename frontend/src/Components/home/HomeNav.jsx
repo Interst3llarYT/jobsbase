@@ -1,10 +1,22 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
-import { Menu, X, ChevronDown, Briefcase, Bell, Upload, MessageCircle, Users, AlertTriangle, User } from "lucide-react";
+import { useState, useEffect } from "react";
+import {
+  Menu, X, ChevronDown, Briefcase, Bell, Upload,
+  MessageCircle, Users, AlertTriangle, User, Moon, Sun
+} from "lucide-react";
+import "../../styles/HomeNav.css"; // Adjust the path as necessary
 
 function Navb({ userName = "User" }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Apply saved dark mode preference on mount
+  useEffect(() => {
+    const savedMode = localStorage.getItem("darkMode") === "true";
+    setDarkMode(savedMode);
+    document.body.classList.toggle("dark-mode", savedMode);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -20,10 +32,16 @@ function Navb({ userName = "User" }) {
     setActiveDropdown(null);
   };
 
+  const toggleDarkMode = () => {
+    const newMode = !darkMode;
+    setDarkMode(newMode);
+    document.body.classList.toggle("dark-mode", newMode);
+    localStorage.setItem("darkMode", newMode.toString());
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom sticky-top">
       <div className="container-fluid">
-        {/* Logo */}
         <NavLink 
           to="/home" 
           className="navbar-brand fw-bold text-primary fs-3"
@@ -32,14 +50,12 @@ function Navb({ userName = "User" }) {
           JobsBase
         </NavLink>
 
-        {/* Mobile Hamburger */}
         <button className="navbar-toggler border-0" type="button" onClick={toggleMenu}>
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
         <div className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}>
           <ul className="navbar-nav ms-auto">
-            {/* Jobs Dropdown */}
             <li className="nav-item dropdown">
               <div
                 className="nav-link dropdown-toggle"
@@ -62,14 +78,12 @@ function Navb({ userName = "User" }) {
               </ul>
             </li>
 
-            {/* Upload */}
             <li className="nav-item">
               <NavLink to="/upload" className="nav-link" onClick={closeMenu}>
                 <Upload size={16} className="me-2" /> Upload Content
               </NavLink>
             </li>
 
-            {/* Community Dropdown */}
             <li className="nav-item dropdown">
               <div
                 className="nav-link dropdown-toggle"
@@ -92,18 +106,23 @@ function Navb({ userName = "User" }) {
               </ul>
             </li>
 
-            {/* Report */}
             <li className="nav-item">
               <NavLink to="/report" className="nav-link" onClick={closeMenu}>
                 <AlertTriangle size={16} className="me-2" /> Report
               </NavLink>
             </li>
 
-            {/* Profile */}
             <li className="nav-item">
               <NavLink to="/profile" className="nav-link" onClick={closeMenu}>
                 <User size={16} className="me-2" /> Hello, {userName}
               </NavLink>
+            </li>
+
+            {/* Dark Mode Toggle */}
+            <li className="nav-item">
+              <button className="btn btn-outline-secondary ms-3" onClick={toggleDarkMode}>
+                {darkMode ? "Light Mode" : "Dark Mode"}
+              </button>
             </li>
           </ul>
         </div>

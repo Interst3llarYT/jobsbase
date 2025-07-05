@@ -89,3 +89,46 @@
   color: #777;
   margin: 0.2rem 0;
 }
+body.dark-mode .video-container {
+  background: #1a1a1a;
+  color: #e0e0e0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .jobbase-title {
+  color: #91a7ff; /* slightly lighter than #6e8efb */
+}
+
+body.dark-mode .verified-icon {
+  filter: drop-shadow(0 0 2px #9775fa);
+}
+
+body.dark-mode .video-link {
+  box-shadow: 0 6px 18px rgba(91, 121, 219, 0.3);
+}
+
+body.dark-mode .video-link:hover {
+  box-shadow: 0 12px 28px rgba(91, 121, 219, 0.5);
+}
+
+body.dark-mode .video-details {
+  background: #232323;
+  color: #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .video-description {
+  color: #e0e0e0;
+}
+
+body.dark-mode .video-author {
+  color: #91a7ff;
+}
+
+body.dark-mode .at-symbol {
+  color: #c792ea;
+}
+
+body.dark-mode .video-meta {
+  color: #999;
+}

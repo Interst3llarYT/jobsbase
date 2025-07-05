@@ -109,3 +109,36 @@
     transform: translateY(0);
   }
 }
+body.dark-mode .business-home {
+  background: #1a1a1a;
+  color: #f0f0f0;
+}
+body.dark-mode .dashboard-card {
+  background: rgba(50, 50, 50, 0.8);
+  color: #f0f0f0;
+}
+body.dark-mode .dashboard-card button {
+  background-color: #3a3a3a;
+  color: #f0f0f0;
+}
+body.dark-mode .dashboard-card button:hover {
+  background-color: #4a4a4a;
+}
+body.dark-mode .recent-activity {
+  background: rgba(60, 60, 60, 0.8);
+}
+body.dark-mode .recent-activity h2 {
+  color: #f0f0f0;
+}
+body.dark-mode .recent-activity li {
+  color: #b0b0b0;
+}
+body.dark-mode .welcome-section {
+  color: #f0f0f0;
+}
+body.dark-mode .welcome-title {
+  color: #ffd369;
+}
+body.dark-mode .welcome-subtext {
+  color: #b0b0b0;
+}

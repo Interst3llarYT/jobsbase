@@ -151,3 +151,51 @@ body, html {
   transform: scale(1.05);
   box-shadow: 0 0 25px rgba(229, 46, 113, 0.8), 0 0 40px rgba(255, 138, 0, 0.8);
 }
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .wideo,
+body.dark-mode .sections {
+  background-color: #1e1e1e;
+  color: #ccc;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .wideo-recmnds {
+  background-color: transparent;
+}
+
+body.dark-mode .joblogo {
+  color: #e0e0e0;
+}
+
+body.dark-mode .textshtuf {
+  color: #999;
+}
+
+body.dark-mode .cmnttext {
+  background-color: #232323;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+body.dark-mode .btnlike,
+body.dark-mode .btncmnt,
+body.dark-mode .showcmnts,
+body.dark-mode .reprtvid,
+body.dark-mode .btun {
+  background: linear-gradient(135deg, #4b5bba, #7c5fc7);
+  color: #fff;
+}
+
+body.dark-mode .btun:hover {
+  background: linear-gradient(135deg, #3f4ca0, #6949b0);
+}
+
+/* Optional: slightly dim image appearance */
+body.dark-mode .img-fluid {
+  filter: brightness(0.95);
+}

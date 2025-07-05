@@ -98,3 +98,53 @@
     transform: translateY(0);
   }
 }
+body.dark-mode .jobs-page {
+  background-color: #141414;
+  color: #b0b0b0;
+}
+body.dark-mode .jobs-hero h1 {
+  color: #ffd369;
+}
+body.dark-mode .job-card {
+  background: #1a1a1a;
+  color: #b0b0b0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+body.dark-mode .job-card:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+body.dark-mode .apply-btn {
+  background: #5a5a5a74;
+  color: #fff;
+}
+body.dark-mode .apply-btn:hover {
+  background: #7876005f;
+  transform: scale(1.05);
+}
+body.dark-mode .apply-btn:active {
+  transform: scale(0.95);
+}
+body.dark-mode .company,
+body.dark-mode .location {
+  color: #b0b0b0;
+}
+body.dark-mode .jobs-hero p {
+  color: #b0b0b0;
+}
+
+body.dark-mode .jobs-grid {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 15px;
+}
+body.dark-mode .jobs-grid .job-card {
+  background: #2a2a2a;
+  color: #b0b0b0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+body.dark-mode .jobs-grid .job-card:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+body.dark-mode .jobs-grid .job-card h2 {
+  color: #ffd369;
+}

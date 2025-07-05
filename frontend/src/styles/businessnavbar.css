@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, #ececec, #fbfbf4);
+  background: linear-gradient(90deg, #e0e0e0, #f3f3f3); /* softened greys */
   padding: 1rem 2rem;
   font-family: 'Poppins', sans-serif;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -12,7 +12,7 @@
 }
 
 .nav-link {
-  color: white;
+  color: #444; /* dark grey instead of white */
   margin: 0 1rem;
   text-decoration: none;
   font-weight: 500;
