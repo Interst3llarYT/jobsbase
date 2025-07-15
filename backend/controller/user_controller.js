@@ -34,7 +34,7 @@ const UserLogin = async (req, res) => {
             return res.status(404).json({ error: "User not found" });
         }
         // Logic to authenticate the user (add password check here if needed)
-        res.status(200).json({ message: "User logged in successfully" });
+        res.status(200).json({ message: "User logged in successfully",ut:"individual",email:email });
     } catch (error) {
         console.error(error);
         res.status(500).json({
@@ -54,7 +54,7 @@ const busilogin = async (req, res) => {
             return res.status(404).json({ error: "Business user not found" });
         }
         // Logic to authenticate the business user (add password check here if needed)
-        res.status(200).json({ message: "Business user logged in successfully" });
+        res.status(200).json({ message: "Business user logged in successfully",ut:"business",email:email });
     } catch (error) {
         console.error(error);
         res.status(500).json({

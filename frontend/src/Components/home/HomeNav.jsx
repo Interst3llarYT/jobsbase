@@ -4,6 +4,7 @@ import {
   Menu, X, ChevronDown, Briefcase, Bell, Upload,
   MessageCircle, Users, AlertTriangle, User, Moon, Sun
 } from "lucide-react";
+import Logout from "../logout";
 import "../../styles/HomeNav.css"; // Adjust the path as necessary
 
 function Navb({ userName = "User" }) {
@@ -40,6 +41,8 @@ function Navb({ userName = "User" }) {
   };
 
   return (
+<>
+
     <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom sticky-top">
       <div className="container-fluid">
         <NavLink 
@@ -118,6 +121,12 @@ function Navb({ userName = "User" }) {
               </NavLink>
             </li>
 
+ <li className="nav-item">
+              <NavLink to="/logout" className="nav-link" onClick={closeMenu}>
+                 Logout
+              </NavLink>
+            </li>
+
             {/* Dark Mode Toggle */}
             <li className="nav-item">
               <button className="btn btn-outline-secondary ms-3" onClick={toggleDarkMode}>
@@ -128,6 +137,8 @@ function Navb({ userName = "User" }) {
         </div>
       </div>
     </nav>
+</>
+    
   );
 }
 

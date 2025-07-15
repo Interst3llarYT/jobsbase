@@ -21,9 +21,12 @@ async function invlogin(event) {
     console.log(data); // handle success
     if (response.ok) {
       alert("Login successful!");
-      window.location.href = "/feed";  // Redirect to feed or home page
       // Optionally, you can store user data in localStorage or context for further use
-      localStorage.setItem("user", JSON.stringify(data.user));
+      sessionStorage.setItem("ut", JSON.stringify(data.ut));
+      sessionStorage.setItem("email", JSON.stringify(data.email));
+      
+      window.location.href = "/feed";  // Redirect to feed or home page
+
     } else {
       alert("Login failed: " + data.message);
     }
@@ -48,9 +51,11 @@ async function busilogin(event) {
     console.log(data); // handle success
     if (response.ok) {
       alert("Login successful!");
-      window.location.href = "/business";  // Redirect to business page
       // Optionally, you can store user data in localStorage or context for further use
-      localStorage.setItem("user", JSON.stringify(data.user));
+      sessionStorage.setItem("ut", JSON.stringify(data.ut));
+      sessionStorage.setItem("email", JSON.stringify(data.email));
+      
+      window.location.href = "/business";  // Redirect to business page
     } else {
       alert("Login failed: " + data.message);
     }
@@ -109,7 +114,7 @@ function SignIn() {
                       <input type="email" placeholder="Enter Your Email" className="form-control input-aesthetic mb-3" required />
                       <input type="password" placeholder="Enter Your Password" className="form-control input-aesthetic mb-3" required />
                       {/* <NavLink to="/feed"> */}
-                        <button type="submit" className="btn btn-primary w-100">Login</button>
+                      <button type="submit" className="btn btn-primary w-100">Login</button>
                       {/* </NavLink> */}
 
                     </form>
@@ -136,7 +141,7 @@ function SignIn() {
                       <input type="email" placeholder="Enter Your Email" className="form-control input-aesthetic mb-3" required />
                       <input type="password" placeholder="Enter Your Password" className="form-control input-aesthetic mb-3" required />
                       {/* <NavLink to="/feed" className="btn btn-secondary w-100"> */}
-                        <button type="submit" className="btn btn-secondary w-100">Business Login</button>
+                      <button type="submit" className="btn btn-secondary w-100">Business Login</button>
                       {/* </NavLink> */}
                     </form>
                     <div className="mt-3 text-center">
