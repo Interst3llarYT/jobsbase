@@ -3,6 +3,7 @@ import express from "express"
 export const router= express.Router()
 import "../controller/user_controller.js"
 import user_controller from "../controller/user_controller.js";
+import job_controller from "../controller/job_controlller.js";
 import user_profile from "../controller/userprofile_controller.js";
 
 
@@ -12,6 +13,7 @@ router.post("/busyregi",user_controller.busyRegi)
 router.post("/login", user_controller.UserLogin)
 router.post("/busilogin", user_controller.busilogin)
 router.post("/userprofile", user_profile.userprofile)
+router.post("/jobregi", job_controller.jobRegi)
 
 router.get("/", (req, res) => {
     res.status(200).json({ message: "SERVER WORKING" });
