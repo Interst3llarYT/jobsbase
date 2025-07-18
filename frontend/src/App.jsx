@@ -21,6 +21,7 @@ import BusinessChat from "./Components/BusinessHome/BusinessChat.jsx";
 import BusinessUpload from "./Components/BusinessHome/BusinessUpload.jsx";
 import BusinessReport from "./Components/BusinessHome/BusinessReport.jsx";
 import BusinessProfile from "./Components/BusinessHome/BusinessProfile.jsx";
+import JobDetails from "./Components/home/JobDetails.jsx";
 
 async function Request(){
 try{
@@ -120,6 +121,7 @@ function App() {
             <Route path="/profile" element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
             <Route path="/home" element={<ProtectedRoute><SignedInHomePage/></ProtectedRoute>}/>
             <Route path="/jobs" element={<ProtectedRoute><Jobs/></ProtectedRoute>}/>
+            <Route path="/jobs/:id" element={<ProtectedRoute><JobDetails/></ProtectedRoute>}/>
             <Route path="/notifications" element={<ProtectedRoute><Notifications/></ProtectedRoute>}/>
             <Route path="/upload" element={<ProtectedRoute><Upload/></ProtectedRoute>}/>
             <Route path="/report" element={<ProtectedRoute><Report/></ProtectedRoute>}/>

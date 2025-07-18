@@ -3,26 +3,18 @@ import Navb from "./HomeNav";
 import "../../styles/jobs.css";
 
 const Jobs = () => {
-  const jobs = [
-    {
-      id: 1,
-      title: "Frontend Developer",
-      company: "TechNova",
-      location: "Remote",
-    },
-    {
-      id: 2,
-      title: "UI/UX Designer",
-      company: "CreativeBits",
-      location: "New York, NY",
-    },
-    {
-      id: 3,
-      title: "Backend Engineer",
-      company: "CloudCore",
-      location: "San Francisco, CA",
-    },
-  ];
+  const [jobs, setJobs] = React.useState([]);
+
+  React.useEffect(() => {
+    // Fetch jobs from an API or use a static list
+    const fetchJobs = async () => {
+      const response = await fetch("https://7z5574jm-9000.use.devtunnels.ms/jobs")
+      const data = await response.json();
+      setJobs(data);
+    };
+
+    fetchJobs();
+  }, []);
 
   return (
     <>
@@ -39,7 +31,9 @@ const Jobs = () => {
             <h2>{job.title}</h2>
             <p className="company">{job.company}</p>
             <p className="location">{job.location}</p>
+            <a href={`/jobs/${job._id}`} className="view-details">
             <button className="apply-btn">Quick Apply</button>
+            </a>
           </div>
         ))}
       </div>

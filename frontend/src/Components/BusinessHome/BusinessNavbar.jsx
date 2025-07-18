@@ -36,6 +36,8 @@ function BusinessNavbar() {
 
       <div className="nav-right">
         <NavLink to="/business/profile" className="nav-link">Manage Profile</NavLink>
+        <NavLink to="/logout" className="nav-link">Logout</NavLink>
+
         <button className="dark-toggle" onClick={() => setDarkMode(!darkMode)}>
           {darkMode ? "Light Mode" : "Dark Mode"}
         </button>

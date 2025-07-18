@@ -1,0 +1,201 @@
+/* General container */
+.job-details-container {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9ff;
+  color: #333;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(110, 142, 251, 0.15);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Card layout */
+.job-details-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Header Section */
+.job-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #6e8efb;
+  margin-bottom: 0.3rem;
+}
+
+.job-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #777;
+}
+
+.location {
+  font-size: 1rem;
+  color: #888;
+}
+
+.salary {
+  font-weight: 600;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+/* Job Description & Skills */
+.job-section h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
+
+.job-section p {
+  line-height: 1.6;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+/* Skills container */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background-color: #6e8efb;
+  color: white;
+  padding: 0.4rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.apply-button,
+.save-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.apply-button {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+}
+
+.save-button {
+  background: transparent;
+  border: 2px solid #6e8efb;
+  color: #6e8efb;
+}
+
+.apply-button:hover {
+  background: linear-gradient(135deg, #5a72db, #8e5fd1);
+  transform: translateY(-2px);
+}
+
+.save-button:hover {
+  background: #6e8efb;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Error Message */
+.error-message {
+  text-align: center;
+  color: #ff6b6b;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 2rem 0;
+}
+.share-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background-color: #f39c12;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .job-details-container {
+        padding: 1rem;
+    }
+
+    .job-header h1 {
+        font-size: 2rem;
+    }
+
+    .job-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .location,
+    .salary {
+        font-size: 0.9rem;
+    }
+
+    .job-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .job-section p {
+        font-size: 0.95rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* === DARK MODE SUPPORT === */
+body.dark-mode .job-details-container {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .job-header h1 {
+  color: #ffd369;
+}
+
+body.dark-mode .job-header h2,
+body.dark-mode .location,
+body.dark-mode .salary,
+body.dark-mode .job-section h3,
+body.dark-mode .job-section p {
+  color: #cccccc;
+}
+
+body.dark-mode .apply-button {
+  background: linear-gradient(135deg, #ffd369, #ff8a00);
+  color: #121212;
+}
+
+body.dark-mode .save-button {
+  border: 2px solid #ffd369;
+  color: #ffd369;
+}
+
+body.dark-mode .save-button:hover {
+  background: #ffd369;
+  color: #121212;
+}

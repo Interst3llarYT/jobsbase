@@ -15,6 +15,12 @@ router.post("/busilogin", user_controller.busilogin)
 router.post("/userprofile", user_profile.userprofile)
 router.post("/jobregi", job_controller.jobRegi)
 
+
+
+
+router.get("/jobs", job_controller.getJobs);
+router.get("/jobs/:id", job_controller.getJobById);
+
 router.get("/", (req, res) => {
     res.status(200).json({ message: "SERVER WORKING" });
   });
