@@ -13,6 +13,7 @@ router.post("/busyregi",user_controller.busyRegi)
 router.post("/login", user_controller.UserLogin)
 router.post("/busilogin", user_controller.busilogin)
 router.post("/userprofile", user_profile.userprofile)
+router.get("/getuserprofile", user_profile.getUserProfile)
 router.post("/jobregi", job_controller.jobRegi)
 
 

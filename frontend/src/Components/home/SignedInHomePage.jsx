@@ -31,7 +31,9 @@ function SignedInHomePage() {
       }, 250);
     }
   }, [location.state]);
-
+const userData = JSON.parse(localStorage.getItem("user"));
+const hey = userData?.firstname || "User";
+// alert(userData?.firstname);
   return (
     <>
       <Navb />
@@ -47,7 +49,7 @@ function SignedInHomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Hey, User!
+            Hey, {hey}!
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

@@ -14,6 +14,7 @@
     "axios": "^1.9.0",
     "bootstrap": "^5.3.6",
     "canvas-confetti": "^1.9.3",
+    "crypto-js": "^4.2.0",
     "framer-motion": "^12.15.0",
     "lucide-react": "^0.511.0",
     "react": "^19.0.0",

@@ -3,18 +3,22 @@ import { motion } from "framer-motion";
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Navbar from "./Navbar";
 import "../../styles/SignIn.css";  // New CSS file for aesthetic styling
+import CryptoJS from "crypto-js";
 
 async function invlogin(event) {
   event.preventDefault();
 
   const email = event.target[0].value;
   const password = event.target[1].value;
+  
+  // Encrypt password using CryptoJS AES
+  const encryptedPassword = CryptoJS.AES.encrypt(password, 'krish').toString();
 
   try {
     const response = await fetch("https://7z5574jm-9000.use.devtunnels.ms/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ email, password: encryptedPassword }),
     });
 
     const data = await response.json();
@@ -40,11 +44,14 @@ async function busilogin(event) {
   const email = event.target[0].value;
   const password = event.target[1].value;
 
+  // Encrypt password using CryptoJS AES
+  const encryptedPassword = CryptoJS.AES.encrypt(password, 'krish').toString();
+
   try {
     const response = await fetch("https://7z5574jm-9000.use.devtunnels.ms/busilogin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ email, password: encryptedPassword }),
     });
 
     const data = await response.json();

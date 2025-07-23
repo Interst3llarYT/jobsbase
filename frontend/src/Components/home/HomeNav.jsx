@@ -39,7 +39,8 @@ function Navb({ userName = "User" }) {
     document.body.classList.toggle("dark-mode", newMode);
     localStorage.setItem("darkMode", newMode.toString());
   };
-
+const userData = JSON.parse(localStorage.getItem("user"));
+const hey = userData?.firstname || "User";
   return (
 <>
 
@@ -117,7 +118,7 @@ function Navb({ userName = "User" }) {
 
             <li className="nav-item">
               <NavLink to="/profile" className="nav-link" onClick={closeMenu}>
-                <User size={16} className="me-2" /> Hello, {userName}
+                <User size={16} className="me-2" /> Hello, {hey}
               </NavLink>
             </li>
 

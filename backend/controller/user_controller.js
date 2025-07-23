@@ -33,8 +33,11 @@ const UserLogin = async (req, res) => {
         if (!user) {
             return res.status(404).json({ error: "User not found" });
         }
-        // Logic to authenticate the user (add password check here if needed)
-        res.status(200).json({ message: "User logged in successfully",ut:"individual",email:email });
+        // Check if password matches
+        if (user.password !== password) {
+            return res.status(401).json({ error: "Invalid password" });
+        }
+        res.status(200).json({ message: "User logged in successfully", ut: "individual", email: email });
     } catch (error) {
         console.error(error);
         res.status(500).json({
@@ -53,8 +56,11 @@ const busilogin = async (req, res) => {
         if (!businessUser) {
             return res.status(404).json({ error: "Business user not found" });
         }
-        // Logic to authenticate the business user (add password check here if needed)
-        res.status(200).json({ message: "Business user logged in successfully",ut:"business",email:email });
+        // Check if password matches
+        if (businessUser.password !== password) {
+            return res.status(401).json({ error: "Invalid password" });
+        }
+        res.status(200).json({ message: "Business user logged in successfully", ut: "business", email: email });
     } catch (error) {
         console.error(error);
         res.status(500).json({

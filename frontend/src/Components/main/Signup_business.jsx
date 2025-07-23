@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../../styles/background.css"; // Reuse background styles
+import CryptoJS from 'crypto-js';
 
 function SignUpBusi() {
   const [user, setuser] = useState('');
@@ -19,13 +20,17 @@ function SignUpBusi() {
     seterror('');
     try {
       const backend = 'https://7z5574jm-9000.use.devtunnels.ms/busyregi';
+      
+      // Encrypt password using CryptoJS AES
+      const encryptedPassword = CryptoJS.AES.encrypt(pass, 'krish').toString();
+
       const response = await fetch(backend, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: name,
           email: email,
-          password: pass,
+          password: encryptedPassword,
           phone: number
         })
       });

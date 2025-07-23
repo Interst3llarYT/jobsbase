@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../../styles/background.css";
+import CryptoJS from 'crypto-js';
 
 function SignUp() {
     const [fname, setfname] = useState('');
@@ -19,6 +20,9 @@ function SignUp() {
         seterror('');
         try {
             const backend = 'https://7z5574jm-9000.use.devtunnels.ms/indregi';
+            // Encrypt password using CryptoJS AES
+            const encryptedPassword = CryptoJS.AES.encrypt(pass, 'krish').toString();
+
             const response = await fetch(backend, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -27,7 +31,7 @@ function SignUp() {
                     lastname: lname,
                     age: age,
                     email: user,
-                    password: pass
+                    password: encryptedPassword
                 })
             });
             const data = await response.json();
