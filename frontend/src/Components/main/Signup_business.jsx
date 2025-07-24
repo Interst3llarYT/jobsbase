@@ -30,7 +30,7 @@ function SignUpBusi() {
         body: JSON.stringify({
           name: name,
           email: email,
-          password: encryptedPassword,
+          password: pass,
           phone: number
         })
       });

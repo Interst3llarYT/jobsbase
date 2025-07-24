@@ -1,6 +1,7 @@
 import mongoose from "mongoose"
 import User from "../models/user_model.js"
 import Business from "../models/business_model.js";
+import bcrypt from "bcrypt";
 const regi = async (req, res) => {
     try {
         const { firstname, lastname, age, email, password } = req.body;
@@ -8,8 +9,12 @@ const regi = async (req, res) => {
         if (!firstname || !lastname || !age || !email || !password) {
             return res.status(400).json({ error: "all fields are required" })
         }
+        // Hash the password
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(password, salt);
+        
         const newUser = new User({
-            firstname, lastname, age, email, password
+            firstname, lastname, age, email, password: hashedPassword
         });
         await newUser.save();
         res.status(201).json({message: "user registered successfully"})
@@ -23,21 +28,25 @@ const regi = async (req, res) => {
       }
 }
 const UserLogin = async (req, res) => {
+    
     try {
         const { email, password } = req.body;
+        console.log(req.body)
         if (!email || !password) {
             return res.status(400).json({ error: "all fields are required" });
         }
         // Check if user exists in the database
         const user = await User.findOne({ email });
+        console.log("fff",user.password, password)
         if (!user) {
             return res.status(404).json({ error: "User not found" });
         }
-        // Check if password matches
-        if (user.password !== password) {
+        // Check if password matches using bcrypt
+        const validPassword = await bcrypt.compare(password, user.password);
+        if (!validPassword) {
             return res.status(401).json({ error: "Invalid password" });
         }
-        res.status(200).json({ message: "User logged in successfully", ut: "individual", email: email });
+        res.status(200).json({ message: "User logged in successfully", ut: "individual", email: email,userName: user.firstname });
     } catch (error) {
         console.error(error);
         res.status(500).json({
@@ -56,8 +65,9 @@ const busilogin = async (req, res) => {
         if (!businessUser) {
             return res.status(404).json({ error: "Business user not found" });
         }
-        // Check if password matches
-        if (businessUser.password !== password) {
+        // Check if password matches using bcrypt
+        const validPassword = await bcrypt.compare(password, businessUser.password);
+        if (!validPassword) {
             return res.status(401).json({ error: "Invalid password" });
         }
         res.status(200).json({ message: "Business user logged in successfully", ut: "business", email: email });
@@ -75,8 +85,12 @@ const busyRegi = async (req, res) => {
         if (!name || !phone || !email || !password) {
             return res.status(400).json({ error: "all fields are required" })
         }
+        // Hash the password
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(password, salt);
+
         const newBusiness = new Business({
-            name, email, password, phone
+            name, email, password: hashedPassword, phone
         });
         await newBusiness.save();
         res.status(201).json({message: "user registered successfully"})

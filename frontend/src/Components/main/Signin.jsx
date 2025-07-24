@@ -12,13 +12,13 @@ async function invlogin(event) {
   const password = event.target[1].value;
   
   // Encrypt password using CryptoJS AES
-  const encryptedPassword = CryptoJS.AES.encrypt(password, 'krish').toString();
+  //const encryptedPassword = CryptoJS.AES.encrypt(password, 'krish').toString();
 
   try {
     const response = await fetch("https://7z5574jm-9000.use.devtunnels.ms/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password: encryptedPassword }),
+      body: JSON.stringify({ email, password: password }),  // Use the plain password for now
     });
 
     const data = await response.json();
@@ -26,10 +26,11 @@ async function invlogin(event) {
     if (response.ok) {
       alert("Login successful!");
       // Optionally, you can store user data in localStorage or context for further use
+      localStorage.setItem("user", JSON.stringify(data.userName));
       sessionStorage.setItem("ut", JSON.stringify(data.ut));
       sessionStorage.setItem("email", JSON.stringify(data.email));
-      
-      window.location.href = "/feed";  // Redirect to feed or home page
+
+      window.location.href = "/home";  // Redirect to home page
 
     } else {
       alert("Login failed: " + data.message);
@@ -45,13 +46,13 @@ async function busilogin(event) {
   const password = event.target[1].value;
 
   // Encrypt password using CryptoJS AES
-  const encryptedPassword = CryptoJS.AES.encrypt(password, 'krish').toString();
+  //const encryptedPassword = CryptoJS.AES.encrypt(password, 'krish').toString();
 
   try {
     const response = await fetch("https://7z5574jm-9000.use.devtunnels.ms/busilogin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password: encryptedPassword }),
+      body: JSON.stringify({ email, password: password }),
     });
 
     const data = await response.json();

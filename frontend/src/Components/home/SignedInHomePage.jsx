@@ -32,7 +32,7 @@ function SignedInHomePage() {
     }
   }, [location.state]);
 const userData = JSON.parse(localStorage.getItem("user"));
-const hey = userData?.firstname || "User";
+const hey = userData || "User";
 // alert(userData?.firstname);
   return (
     <>

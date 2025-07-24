@@ -31,7 +31,7 @@ function SignUp() {
                     lastname: lname,
                     age: age,
                     email: user,
-                    password: encryptedPassword
+                    password: pass
                 })
             });
             const data = await response.json();
