@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <title>Jobsbase</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", serif;
+    }
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .dark-toggle {
+      margin-left: 1rem;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      background-color: #828181;
+      /* lighter grey */
+      color: #232323;
+      transition: all 0.3s ease;
+    }
+
+    .dark-toggle:hover {
+      background-color: #ffd369;
+      color: #232323;
+    }
+
+    body.dark-mode {
+      background-color: #181818;
+      color: #b0b0b0;
+    }
+
+    body.dark-mode .business-navbar {
+      background: #181818;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    }
+
+    body.dark-mode .nav-link {
+      color: #b0b0b0;
+    }
+
+    body.dark-mode .nav-link:hover {
+      color: #ffd369;
+    }
+
+    body.dark-mode .dark-toggle {
+      background-color: #232323;
+      color: #ffd369;
+      border: 1px solid #444;
+    }
+
+    body.dark-mode .dark-toggle:hover {
+      background-color: #ffd369;
+      color: #232323;
+    }
+
+    body.dark-mode .nav-left,
+    body.dark-mode .nav-center,
+    body.dark-mode .nav-right {
+      background: transparent;
+    }
+
+    body.dark-mode input,
+    body.dark-mode select,
+    body.dark-mode textarea {
+      background: #232323;
+      color: #b0b0b0;
+      border: 1px solid #444;
+    }
+
+    body.dark-mode input::placeholder,
+    body.dark-mode textarea::placeholder {
+      color: #666666;
+    }
+
+    body.dark-mode button {
+      background: #232323;
+      color: #ffd369;
+      border: 1px solid #444;
+    }
+
+    body.dark-mode button:hover {
+      background: #ffd369;
+      color: #232323;
+    } 
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/App.jsx"></script>
+</body>
+
+</html>
